@@ -1,0 +1,651 @@
+/*
+  The MIT License
+  Copyright 2018 Intuit Inc.
+  
+  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation 
+  files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, 
+  modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the 
+  Software is furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE 
+  WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR 
+  COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+  ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
+*/
+@-webkit-keyframes qbal-FadeEnter {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes qbal-FadeEnter {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes qbal-RightEnter {
+  from {
+    -webkit-transform: translateX(-90px);
+            transform: translateX(-90px); }
+  to {
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes qbal-RightEnter {
+  from {
+    -webkit-transform: translateX(-90px);
+            transform: translateX(-90px); }
+  to {
+    -webkit-transform: none;
+            transform: none; } }
+
+@-webkit-keyframes qbal-LeftEnter {
+  from {
+    -webkit-transform: translateX(90px);
+            transform: translateX(90px); }
+  to {
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes qbal-LeftEnter {
+  from {
+    -webkit-transform: translateX(90px);
+            transform: translateX(90px); }
+  to {
+    -webkit-transform: none;
+            transform: none; } }
+
+@-webkit-keyframes qbal-UpEnter {
+  from {
+    -webkit-transform: translateY(90px);
+            transform: translateY(90px); }
+  to {
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes qbal-UpEnter {
+  from {
+    -webkit-transform: translateY(90px);
+            transform: translateY(90px); }
+  to {
+    -webkit-transform: none;
+            transform: none; } }
+
+@-webkit-keyframes qbal-DownEnter {
+  from {
+    -webkit-transform: translateY(-90px);
+            transform: translateY(-90px); }
+  to {
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes qbal-DownEnter {
+  from {
+    -webkit-transform: translateY(-90px);
+            transform: translateY(-90px); }
+  to {
+    -webkit-transform: none;
+            transform: none; } }
+
+@-webkit-keyframes qbal-UpExaggeratedEnter {
+  from {
+    -webkit-transform: translateY(125px);
+            transform: translateY(125px); }
+  to {
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes qbal-UpExaggeratedEnter {
+  from {
+    -webkit-transform: translateY(125px);
+            transform: translateY(125px); }
+  to {
+    -webkit-transform: none;
+            transform: none; } }
+
+@-webkit-keyframes qbal-DownSubtleEnter {
+  from {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px); }
+  to {
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes qbal-DownSubtleEnter {
+  from {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px); }
+  to {
+    -webkit-transform: none;
+            transform: none; } }
+
+@-webkit-keyframes qbal-GrowEnter {
+  from {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8); }
+  to {
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes qbal-GrowEnter {
+  from {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8); }
+  to {
+    -webkit-transform: none;
+            transform: none; } }
+
+@-webkit-keyframes qbal-GrowExaggeratedEnter {
+  from {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5); }
+  to {
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes qbal-GrowExaggeratedEnter {
+  from {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5); }
+  to {
+    -webkit-transform: none;
+            transform: none; } }
+
+@-webkit-keyframes qbal-ExpandHorizontalEnter164 {
+  from {
+    width: 0; }
+  to {
+    width: 164px; } }
+
+@keyframes qbal-ExpandHorizontalEnter164 {
+  from {
+    width: 0; }
+  to {
+    width: 164px; } }
+
+@-webkit-keyframes qbal-FadeExit {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+@keyframes qbal-FadeExit {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+@-webkit-keyframes qbal-RightExit {
+  from {
+    -webkit-transform: none;
+            transform: none; }
+  to {
+    -webkit-transform: translateX(90px);
+            transform: translateX(90px); } }
+
+@keyframes qbal-RightExit {
+  from {
+    -webkit-transform: none;
+            transform: none; }
+  to {
+    -webkit-transform: translateX(90px);
+            transform: translateX(90px); } }
+
+@-webkit-keyframes qbal-LeftExit {
+  from {
+    -webkit-transform: none;
+            transform: none; }
+  to {
+    -webkit-transform: translateX(-90px);
+            transform: translateX(-90px); } }
+
+@keyframes qbal-LeftExit {
+  from {
+    -webkit-transform: none;
+            transform: none; }
+  to {
+    -webkit-transform: translateX(-90px);
+            transform: translateX(-90px); } }
+
+@-webkit-keyframes qbal-DownExit {
+  from {
+    -webkit-transform: none;
+            transform: none; }
+  to {
+    -webkit-transform: translateY(90px);
+            transform: translateY(90px); } }
+
+@keyframes qbal-DownExit {
+  from {
+    -webkit-transform: none;
+            transform: none; }
+  to {
+    -webkit-transform: translateY(90px);
+            transform: translateY(90px); } }
+
+@-webkit-keyframes qbal-DownExaggeratedExit {
+  from {
+    -webkit-transform: none;
+            transform: none; }
+  to {
+    -webkit-transform: translateY(125px);
+            transform: translateY(125px); } }
+
+@keyframes qbal-DownExaggeratedExit {
+  from {
+    -webkit-transform: none;
+            transform: none; }
+  to {
+    -webkit-transform: translateY(125px);
+            transform: translateY(125px); } }
+
+@-webkit-keyframes qbal-UpExit {
+  from {
+    -webkit-transform: none;
+            transform: none; }
+  to {
+    -webkit-transform: translateY(-90px);
+            transform: translateY(-90px); } }
+
+@keyframes qbal-UpExit {
+  from {
+    -webkit-transform: none;
+            transform: none; }
+  to {
+    -webkit-transform: translateY(-90px);
+            transform: translateY(-90px); } }
+
+@-webkit-keyframes qbal-UpSubtleExit {
+  from {
+    -webkit-transform: none;
+            transform: none; }
+  to {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px); } }
+
+@keyframes qbal-UpSubtleExit {
+  from {
+    -webkit-transform: none;
+            transform: none; }
+  to {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px); } }
+
+@-webkit-keyframes qbal-ShrinkSubtleExit {
+  from {
+    -webkit-transform: none;
+            transform: none; }
+  to {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9); } }
+
+@keyframes qbal-ShrinkSubtleExit {
+  from {
+    -webkit-transform: none;
+            transform: none; }
+  to {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9); } }
+
+@-webkit-keyframes qbal-ShrinkExit {
+  from {
+    -webkit-transform: none;
+            transform: none; }
+  to {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8); } }
+
+@keyframes qbal-ShrinkExit {
+  from {
+    -webkit-transform: none;
+            transform: none; }
+  to {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8); } }
+
+@-webkit-keyframes qbal-CollapseHorizontalExit164 {
+  from {
+    width: 164px; }
+  to {
+    width: 0; } }
+
+@keyframes qbal-CollapseHorizontalExit164 {
+  from {
+    width: 164px; }
+  to {
+    width: 0; } }
+
+@-webkit-keyframes qbal-PulseGrow {
+  from {
+    -webkit-transform: none;
+            transform: none; }
+  to {
+    -webkit-transform: scale(2.75);
+            transform: scale(2.75); } }
+
+@keyframes qbal-PulseGrow {
+  from {
+    -webkit-transform: none;
+            transform: none; }
+  to {
+    -webkit-transform: scale(2.75);
+            transform: scale(2.75); } }
+
+@-webkit-keyframes qbal-PulseFade {
+  from {
+    opacity: 0.5; }
+  to {
+    opacity: 0; } }
+
+@keyframes qbal-PulseFade {
+  from {
+    opacity: 0.5; }
+  to {
+    opacity: 0; } }
+
+.qbal-fade-enter {
+  -webkit-animation: qbal-FadeEnter 333ms cubic-bezier(0.35, 0, 0.5, 1) backwards;
+          animation: qbal-FadeEnter 333ms cubic-bezier(0.35, 0, 0.5, 1) backwards; }
+
+.qbal-slideRight-enter {
+  -webkit-animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-RightEnter 333ms cubic-bezier(0, 0, 0.1, 1) backwards;
+          animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-RightEnter 333ms cubic-bezier(0, 0, 0.1, 1) backwards; }
+
+.qbal-slideLeft-enter {
+  -webkit-animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-LeftEnter 333ms cubic-bezier(0, 0, 0.1, 1) backwards;
+          animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-LeftEnter 333ms cubic-bezier(0, 0, 0.1, 1) backwards; }
+
+.qbal-slideUp-enter {
+  -webkit-animation: qbal-FadeEnter 333ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-UpEnter 333ms cubic-bezier(0, 0, 0.1, 1) backwards;
+          animation: qbal-FadeEnter 333ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-UpEnter 333ms cubic-bezier(0, 0, 0.1, 1) backwards; }
+
+.qbal-slideDown-enter {
+  -webkit-animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-DownEnter 333ms cubic-bezier(0, 0, 0.1, 1) backwards;
+          animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-DownEnter 333ms cubic-bezier(0, 0, 0.1, 1) backwards; }
+
+.qbal-slideDownSubtle-enter {
+  -webkit-animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-DownSubtleEnter 250ms cubic-bezier(0, 0, 0.1, 1) backwards;
+          animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-DownSubtleEnter 250ms cubic-bezier(0, 0, 0.1, 1) backwards; }
+
+.qbal-slideUpExaggerated-enter {
+  -webkit-animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-UpExaggeratedEnter 250ms cubic-bezier(0, 0, 0.1, 1) backwards;
+          animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-UpExaggeratedEnter 250ms cubic-bezier(0, 0, 0.1, 1) backwards; }
+
+.qbal-expandHorizontal164-enter {
+  -webkit-animation: qbal-ExpandHorizontalEnter164 500ms cubic-bezier(0.35, 0, 0.25, 1) backwards;
+          animation: qbal-ExpandHorizontalEnter164 500ms cubic-bezier(0.35, 0, 0.25, 1) backwards; }
+  .qbal-expandHorizontal164-enter > * {
+    -webkit-animation: qbal-FadeEnter 333ms cubic-bezier(0.35, 0, 0.5, 1) 167ms backwards;
+            animation: qbal-FadeEnter 333ms cubic-bezier(0.35, 0, 0.5, 1) 167ms backwards; }
+
+.qbal-drop-enter {
+  -webkit-animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-DownEnter 750ms cubic-bezier(0.15, 1.3, 0.3, 1) backwards;
+          animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-DownEnter 750ms cubic-bezier(0.15, 1.3, 0.3, 1) backwards; }
+
+.qbal-grow-enter {
+  -webkit-animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-GrowEnter 750ms cubic-bezier(0.15, 1.3, 0.3, 1) backwards;
+          animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-GrowEnter 750ms cubic-bezier(0.15, 1.3, 0.3, 1) backwards; }
+
+.qbal-growExaggerated-enter {
+  -webkit-animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-GrowExaggeratedEnter 750ms cubic-bezier(0.15, 1.3, 0.3, 1) backwards;
+          animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-GrowExaggeratedEnter 750ms cubic-bezier(0.15, 1.3, 0.3, 1) backwards; }
+
+.qbal-fade-exit {
+  -webkit-animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards;
+          animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards; }
+
+.qbal-slideRight-exit {
+  -webkit-animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards, qbal-RightExit 250ms cubic-bezier(0.35, 0, 0.8, 1) forwards;
+          animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards, qbal-RightExit 250ms cubic-bezier(0.35, 0, 0.8, 1) forwards; }
+
+.qbal-slideLeft-exit {
+  -webkit-animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards, qbal-LeftExit 250ms cubic-bezier(0.35, 0, 0.8, 1) forwards;
+          animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards, qbal-LeftExit 250ms cubic-bezier(0.35, 0, 0.8, 1) forwards; }
+
+.qbal-slideDown-exit {
+  -webkit-animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards, qbal-DownExit 250ms cubic-bezier(0.35, 0, 0.8, 1) forwards;
+          animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards, qbal-DownExit 250ms cubic-bezier(0.35, 0, 0.8, 1) forwards; }
+
+.qbal-slideUp-exit {
+  -webkit-animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards, qbal-UpExit 250ms cubic-bezier(0.35, 0, 0.8, 1) forwards;
+          animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards, qbal-UpExit 250ms cubic-bezier(0.35, 0, 0.8, 1) forwards; }
+
+.qbal-slideUpSubtle-exit {
+  -webkit-animation: qbal-FadeExit 167ms cubic-bezier(0.35, 0, 0.5, 1) forwards, qbal-UpSubtleExit 167ms cubic-bezier(0.35, 0, 0.8, 1) forwards;
+          animation: qbal-FadeExit 167ms cubic-bezier(0.35, 0, 0.5, 1) forwards, qbal-UpSubtleExit 167ms cubic-bezier(0.35, 0, 0.8, 1) forwards; }
+
+.qbal-slideDownExaggerated-exit {
+  -webkit-animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards, qbal-DownExaggeratedExit 250ms cubic-bezier(0.35, 0, 0.8, 1) forwards;
+          animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards, qbal-DownExaggeratedExit 250ms cubic-bezier(0.35, 0, 0.8, 1) forwards; }
+
+.qbal-collapseHorizontal164-exit {
+  -webkit-animation: qbal-CollapseHorizontalExit164 500ms cubic-bezier(0.35, 0, 0.25, 1) forwards;
+          animation: qbal-CollapseHorizontalExit164 500ms cubic-bezier(0.35, 0, 0.25, 1) forwards; }
+  .qbal-collapseHorizontal164-exit > * {
+    -webkit-animation: qbal-FadeExit 333ms cubic-bezier(0.35, 0, 0.5, 1) 167ms forwards;
+            animation: qbal-FadeExit 333ms cubic-bezier(0.35, 0, 0.5, 1) 167ms forwards; }
+
+.qbal-rise-exit {
+  -webkit-animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) 500ms forwards, qbal-UpExit 750ms cubic-bezier(0.7, -0.1, 0.6, 0.1) forwards;
+          animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) 500ms forwards, qbal-UpExit 750ms cubic-bezier(0.7, -0.1, 0.6, 0.1) forwards; }
+
+.qbal-shrink-exit {
+  -webkit-animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards, qbal-ShrinkExit 250ms cubic-bezier(0.35, 0, 0.8, 1) forwards;
+          animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards, qbal-ShrinkExit 250ms cubic-bezier(0.35, 0, 0.8, 1) forwards; }
+
+.qbal-shrinkSubtle-exit {
+  -webkit-animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards, qbal-ShrinkSubtleExit 250ms cubic-bezier(0.35, 0, 0.8, 1) forwards;
+          animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards, qbal-ShrinkSubtleExit 250ms cubic-bezier(0.35, 0, 0.8, 1) forwards; }
+
+.qbal-stagger-children :nth-child(1) {
+  -webkit-animation-delay: 250ms;
+          animation-delay: 250ms; }
+
+.qbal-stagger-children :nth-child(2) {
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms; }
+
+.qbal-stagger-children :nth-child(3) {
+  -webkit-animation-delay: 750ms;
+          animation-delay: 750ms; }
+
+.qbal-stagger-children :nth-child(4) {
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms; }
+
+.qbal-stagger-children :nth-child(5) {
+  -webkit-animation-delay: 1250ms;
+          animation-delay: 1250ms; }
+
+.qbal-stagger-children :nth-child(6) {
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms; }
+
+.qbal-stagger-children :nth-child(7) {
+  -webkit-animation-delay: 1750ms;
+          animation-delay: 1750ms; }
+
+.qbal-stagger-children :nth-child(8) {
+  -webkit-animation-delay: 2000ms;
+          animation-delay: 2000ms; }
+
+.qbal-stagger-children :nth-child(9) {
+  -webkit-animation-delay: 2250ms;
+          animation-delay: 2250ms; }
+
+.qbal-stagger-children :nth-child(10) {
+  -webkit-animation-delay: 2500ms;
+          animation-delay: 2500ms; }
+
+.qbal-stagger-children :nth-child(11) {
+  -webkit-animation-delay: 2750ms;
+          animation-delay: 2750ms; }
+
+.qbal-stagger-children :nth-child(12) {
+  -webkit-animation-delay: 3000ms;
+          animation-delay: 3000ms; }
+
+.qbal-stagger-children :nth-child(13) {
+  -webkit-animation-delay: 3250ms;
+          animation-delay: 3250ms; }
+
+.qbal-stagger-children :nth-child(14) {
+  -webkit-animation-delay: 3500ms;
+          animation-delay: 3500ms; }
+
+.qbal-stagger-children :nth-child(15) {
+  -webkit-animation-delay: 3750ms;
+          animation-delay: 3750ms; }
+
+.qbal-stagger-children :nth-child(16) {
+  -webkit-animation-delay: 4000ms;
+          animation-delay: 4000ms; }
+
+.qbal-stagger-children :nth-child(17) {
+  -webkit-animation-delay: 4250ms;
+          animation-delay: 4250ms; }
+
+.qbal-stagger-children :nth-child(18) {
+  -webkit-animation-delay: 4500ms;
+          animation-delay: 4500ms; }
+
+.qbal-stagger-children :nth-child(19) {
+  -webkit-animation-delay: 4750ms;
+          animation-delay: 4750ms; }
+
+.qbal-stagger-children :nth-child(20) {
+  -webkit-animation-delay: 5000ms;
+          animation-delay: 5000ms; }
+
+.qbal-pulse {
+  -webkit-animation: qbal-PulseGrow 2s cubic-bezier(0.35, 0, 0.5, 1), qbal-PulseFade 2s cubic-bezier(0.35, 0, 0.5, 1);
+          animation: qbal-PulseGrow 2s cubic-bezier(0.35, 0, 0.5, 1), qbal-PulseFade 2s cubic-bezier(0.35, 0, 0.5, 1);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%; }
+
+.qbal-transition-width {
+  -webkit-transition: width 500ms cubic-bezier(0.35, 0, 0.25, 1);
+  transition: width 500ms cubic-bezier(0.35, 0, 0.25, 1);
+  will-change: width; }
+
+.qbal-transition-height {
+  -webkit-transition: height 500ms cubic-bezier(0.35, 0, 0.25, 1);
+  transition: height 500ms cubic-bezier(0.35, 0, 0.25, 1);
+  will-change: height; }
+
+.qbal-transition-opacity {
+  -webkit-transition: opacity 250ms cubic-bezier(0.35, 0, 0.5, 1);
+  transition: opacity 250ms cubic-bezier(0.35, 0, 0.5, 1);
+  will-change: opacity; }
+
+.qbal-transition-color {
+  -webkit-transition: color 250ms cubic-bezier(0.35, 0, 0.5, 1);
+  transition: color 250ms cubic-bezier(0.35, 0, 0.5, 1);
+  will-change: color; }
+
+.qbal-overlay-enter {
+  -webkit-animation: qbal-FadeEnter 333ms cubic-bezier(0.35, 0, 0.5, 1) backwards;
+          animation: qbal-FadeEnter 333ms cubic-bezier(0.35, 0, 0.5, 1) backwards; }
+
+.qbal-overlay-exit {
+  -webkit-animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards;
+          animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards; }
+
+.qbal-trowserModal-enter {
+  -webkit-animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-UpExaggeratedEnter 250ms cubic-bezier(0, 0, 0.1, 1) backwards;
+          animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-UpExaggeratedEnter 250ms cubic-bezier(0, 0, 0.1, 1) backwards; }
+  @media screen and (prefers-reduced-motion: reduce) {
+    .qbal-trowserModal-enter {
+      -webkit-animation: qbal-FadeEnter 333ms cubic-bezier(0.35, 0, 0.5, 1) backwards;
+              animation: qbal-FadeEnter 333ms cubic-bezier(0.35, 0, 0.5, 1) backwards; } }
+
+.qbal-trowserModal-exit {
+  -webkit-animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards, qbal-DownExaggeratedExit 250ms cubic-bezier(0.35, 0, 0.8, 1) forwards;
+          animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards, qbal-DownExaggeratedExit 250ms cubic-bezier(0.35, 0, 0.8, 1) forwards; }
+  @media screen and (prefers-reduced-motion: reduce) {
+    .qbal-trowserModal-exit {
+      -webkit-animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards;
+              animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards; } }
+
+.qbal-rightDrawer-enter {
+  -webkit-animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-LeftEnter 333ms cubic-bezier(0, 0, 0.1, 1) backwards;
+          animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-LeftEnter 333ms cubic-bezier(0, 0, 0.1, 1) backwards; }
+
+.qbal-rightDrawer-exit {
+  -webkit-animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards, qbal-RightExit 250ms cubic-bezier(0.35, 0, 0.8, 1) forwards;
+          animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards, qbal-RightExit 250ms cubic-bezier(0.35, 0, 0.8, 1) forwards; }
+
+.qbal-dialogModal-enter {
+  -webkit-animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-GrowEnter 750ms cubic-bezier(0.15, 1.3, 0.3, 1) backwards;
+          animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-GrowEnter 750ms cubic-bezier(0.15, 1.3, 0.3, 1) backwards; }
+
+.qbal-dialogModal-exit {
+  -webkit-animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards, qbal-ShrinkSubtleExit 250ms cubic-bezier(0.35, 0, 0.8, 1) forwards;
+          animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards, qbal-ShrinkSubtleExit 250ms cubic-bezier(0.35, 0, 0.8, 1) forwards; }
+
+.qbal-toastNotification-enter {
+  -webkit-animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-DownEnter 750ms cubic-bezier(0.15, 1.3, 0.3, 1) backwards;
+          animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-DownEnter 750ms cubic-bezier(0.15, 1.3, 0.3, 1) backwards; }
+
+.qbal-toastNotification-exit {
+  -webkit-animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) 500ms forwards, qbal-UpExit 750ms cubic-bezier(0.7, -0.1, 0.6, 0.1) forwards;
+          animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) 500ms forwards, qbal-UpExit 750ms cubic-bezier(0.7, -0.1, 0.6, 0.1) forwards; }
+
+.qbal-tooltip-enter {
+  -webkit-animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-GrowExaggeratedEnter 750ms cubic-bezier(0.15, 1.3, 0.3, 1) backwards;
+          animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-GrowExaggeratedEnter 750ms cubic-bezier(0.15, 1.3, 0.3, 1) backwards; }
+
+.qbal-tooltip-exit {
+  -webkit-animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards;
+          animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards; }
+
+.qbal-coachMark-enter {
+  -webkit-animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-GrowEnter 750ms cubic-bezier(0.15, 1.3, 0.3, 1) backwards;
+          animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-GrowEnter 750ms cubic-bezier(0.15, 1.3, 0.3, 1) backwards; }
+
+.qbal-coachMark-exit {
+  -webkit-animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards, qbal-ShrinkExit 250ms cubic-bezier(0.35, 0, 0.8, 1) forwards;
+          animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards, qbal-ShrinkExit 250ms cubic-bezier(0.35, 0, 0.8, 1) forwards; }
+
+.qbal-expandHorizontal164-enter {
+  -webkit-animation: qbal-ExpandHorizontalEnter164 500ms cubic-bezier(0.35, 0, 0.25, 1) backwards;
+          animation: qbal-ExpandHorizontalEnter164 500ms cubic-bezier(0.35, 0, 0.25, 1) backwards; }
+  .qbal-expandHorizontal164-enter > * {
+    -webkit-animation: qbal-FadeEnter 333ms cubic-bezier(0.35, 0, 0.5, 1) 167ms backwards;
+            animation: qbal-FadeEnter 333ms cubic-bezier(0.35, 0, 0.5, 1) 167ms backwards; }
+
+.qbal-collapseHorizontal164-exit {
+  -webkit-animation: qbal-CollapseHorizontalExit164 500ms cubic-bezier(0.35, 0, 0.25, 1) forwards;
+          animation: qbal-CollapseHorizontalExit164 500ms cubic-bezier(0.35, 0, 0.25, 1) forwards; }
+  .qbal-collapseHorizontal164-exit > * {
+    -webkit-animation: qbal-FadeExit 333ms cubic-bezier(0.35, 0, 0.5, 1) 167ms forwards;
+            animation: qbal-FadeExit 333ms cubic-bezier(0.35, 0, 0.5, 1) 167ms forwards; }
+
+.qbal-flyout-enter {
+  -webkit-animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-DownEnter 333ms cubic-bezier(0, 0, 0.1, 1) backwards;
+          animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-DownEnter 333ms cubic-bezier(0, 0, 0.1, 1) backwards; }
+
+.qbal-flyout-exit {
+  -webkit-animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards, qbal-UpExit 250ms cubic-bezier(0.35, 0, 0.8, 1) forwards;
+          animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards, qbal-UpExit 250ms cubic-bezier(0.35, 0, 0.8, 1) forwards; }
+
+.qbal-dropdown-enter {
+  -webkit-animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-DownSubtleEnter 250ms cubic-bezier(0, 0, 0.1, 1) backwards;
+          animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-DownSubtleEnter 250ms cubic-bezier(0, 0, 0.1, 1) backwards; }
+
+.qbal-dropdown-exit {
+  -webkit-animation: qbal-FadeExit 167ms cubic-bezier(0.35, 0, 0.5, 1) forwards, qbal-UpSubtleExit 167ms cubic-bezier(0.35, 0, 0.8, 1) forwards;
+          animation: qbal-FadeExit 167ms cubic-bezier(0.35, 0, 0.5, 1) forwards, qbal-UpSubtleExit 167ms cubic-bezier(0.35, 0, 0.8, 1) forwards; }
+
+.qbal-tabContent-enter {
+  -webkit-animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-RightEnter 333ms cubic-bezier(0, 0, 0.1, 1) backwards;
+          animation: qbal-FadeEnter 250ms cubic-bezier(0.35, 0, 0.5, 1) backwards, qbal-RightEnter 333ms cubic-bezier(0, 0, 0.1, 1) backwards;
+  -webkit-animation-delay: 250ms;
+          animation-delay: 250ms; }
+
+.qbal-tabContent-exit {
+  -webkit-animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards, qbal-RightExit 250ms cubic-bezier(0.35, 0, 0.8, 1) forwards;
+          animation: qbal-FadeExit 250ms cubic-bezier(0.35, 0, 0.5, 1) forwards, qbal-RightExit 250ms cubic-bezier(0.35, 0, 0.8, 1) forwards; }
+/*# sourceMappingURL=qb_animation_library.css.map */

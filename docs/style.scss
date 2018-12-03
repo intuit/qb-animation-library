@@ -1,0 +1,474 @@
+// The MIT License
+// Copyright 2018 Intuit Inc.
+// 
+// Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation 
+// files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, 
+// modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the 
+// Software is furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE 
+// WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR 
+// COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+// ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
+
+@import "../scss/qb_animation_library.scss";
+
+*, ::after, ::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  letter-spacing: 0.2px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Avenir Next forINTUIT', 'Avenir Next', Avenir, Futura, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html, body {
+  color: #393A3D;
+}
+.container {
+  max-width: 840px;
+  margin: auto;
+}
+
+/* TYPOGRAPHY */
+h1 {
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 52px;
+  letter-spacing: 0.4px;
+  margin-bottom: 20px;
+}
+h2 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.7px;
+  margin-bottom: 40px;
+}
+h3 {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 28px;
+  color: #2CA01C;
+  margin-bottom: 12px;
+}
+ol, ul {
+  margin-left: 20px;
+}
+p, li {
+  font-size: 20px;
+  line-height: 28px;
+}
+p {
+  margin-bottom: 20px;
+}
+p.small {
+  font-size: 16px;
+  line-height: 22px;
+}
+strong {
+  font-weight: 600;
+}
+a {
+  text-decoration: none;
+  color: #0077C5;
+}
+code {
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+  color: #9C005E;
+  white-space: pre;
+  padding: 4px;
+  font-weight: 600;
+}
+#toc ol ul  {
+  list-style-type: disc;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  li {
+    font-size: 16px;
+  }
+}
+
+/* BASE STYLES */
+section {
+  margin-top: 100px;
+  @extend .container;
+}
+button {
+  user-select: all;
+  min-width: 180px;
+  text-align: center;
+  background: #393A3D;
+  height: 36px;
+  border-radius: 18px;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  &:hover {
+    background: #000000;
+    box-shadow: 0 0 0 2px #00D7D7;
+    border: none;
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+  }
+  strong {
+    font-weight: 700;
+  }
+}
+.gray-bg {
+  background: #F4F5F8;
+  padding-top: 60px;
+  padding-bottom: 60px; 
+  margin-top: 80px;
+  > section {
+    margin-top: 0;
+  }
+}
+
+// PAGE SECTIONS
+.logoImage {
+  margin-top: 80px;
+  margin-bottom: 20px;
+  margin-left: -71px;
+}
+
+.class-explorer {
+  display: flex;
+  align-items: stretch;
+  min-height: 100%;
+}
+.class-explorer-buttons {
+  width: 540px;
+}
+.class-buttons-row {
+  border-bottom: 1px solid #D4D7DC;
+  padding-top: 12px;
+  display: flex;
+  &:last-of-type {
+    border: none;
+  }
+}
+.class-buttons-col {
+  width: 50%;
+  button {
+    margin-bottom: 12px;
+  }
+}
+.class-explorer-visualizer {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: flex-end;
+}
+.demo-container {
+  width: 200px;
+  height: 200px;
+  background: #F4F5F8;
+  border: 1px solid #E3E5E8;
+  border-radius: 8px;
+  position: relative;
+  &.hidden {
+    background: none;
+    border: none;
+  }
+}
+#demo-panel-template-a, #demo-panel-template-b , #demo-panel-template-c {
+  display: none;
+}
+#demo-panel-a, #demo-panel-b, #demo-panel-c {
+  position: absolute;
+  will-change: transform, opacity;
+}
+#demo-panel-b {
+  width: 164px;
+  height: 200px;
+  background: #393A3D;
+  border-radius: 8px 0 0 8px;
+  overflow: hidden;
+  will-change: width;
+}
+#demo-panel-b, .sidebar164 {
+  > ul {
+    will-change: opacity;
+    position: absolute;
+    top: 32px;
+    list-style: none;
+    > li {
+      width: 100px;
+      height: 4px;
+      border-radius: 2px;
+      background: white;
+      margin-bottom: 20px;
+    }
+  }
+}
+#demo-panel-c div {
+  position: absolute;
+  top: 44px;
+  left: 44px;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  background-color: #2CA01C;
+}
+
+.example {
+  background: white;
+  height: 360px;
+  border: 1px solid #E3E5E8;
+  position: relative;
+  border-radius: 2px;
+  overflow: hidden;
+  .templates {
+    display: none;
+  }
+  .x {
+    position: absolute;
+    top: 22px;
+    right: 20px;
+  }
+  h1,p {
+    background: #8D9096;
+    &::after {
+      content: "\00a0\00a0";
+    }
+  }
+  h1 {
+    line-height: 20px;
+    margin-bottom: 40px;
+  }
+  p {
+    line-height: 12px;
+    margin-bottom: 12px;
+  }
+  button {
+    background: #2CA01C;
+    min-width: 120px;
+    height: 24px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+  }
+}
+#examples { 
+  h3 {
+    margin-top: 80px;
+  }
+  button {
+    margin-top: 12px;
+  }
+}
+
+.modalOverlay { 
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .6);
+}
+
+.dialogModal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  padding: 20px;
+  width: 280px;
+  margin-left: -140px;
+  height: 240px;
+  margin-top: -120px;
+  background: #FFFFFF;
+  border: 1px solid #D4D7DC;
+  border-radius: 4px;
+}
+
+.trowserModal {
+  position: absolute;
+  left: 0; top: 0; right: 0; bottom: 0;
+  padding: 20px;
+  background: #ECEEF1;
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    padding: 8px;
+    background: #393A3D;
+    button {
+      right: 8px;
+      bottom: 8px;
+    }
+  }
+}
+
+.rightDrawer {
+  position: absolute;
+  top: 0; right: 0; bottom: 0;
+  padding: 20px;
+  width: 280px;
+  background: white;
+  border: 1px solid #D4D7DC;
+  border-radius: 4px 0 0 4px;
+}
+
+img.toastNotification {
+  position: absolute;
+  top: 20px;
+  left: 216px;
+  z-index: 1;
+}
+
+img.tooltip {
+  position: absolute;
+  top: 155px;
+  left: 172px;
+  transform-origin: bottom left;
+}
+
+img.coachMark {
+  position: absolute;
+  top: 81px;
+  left: 294px;
+  transform-origin: top left;
+}
+
+.header {
+  height: 44px;
+  background: #393A3D;
+  z-index: 3;
+  position: relative;
+}
+.content {
+  display: flex;
+  height: calc(100% - 44px);
+  .sidebar164 {
+    width: 164px;
+    background: #393A3D;
+    position: relative;
+    height: 100%;
+  }
+  .card {
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex: 1;
+    border: 1px solid #D4D7DC;
+    border-radius: 2px;
+    position: relative;
+    &:last-of-type {
+      margin-right: 20px;
+    }
+  }
+  .dropdown-button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+}
+
+.flyout {
+  position: absolute;
+  right: 122px;
+  top: 44px;
+  z-index: 2;
+}
+.dropdown {
+  position: absolute;
+  right: 40px;
+  top: 100px;
+  z-index: 2;
+}
+
+#content1, #content2 {
+  position: absolute;
+  top: 10px; right: 10px; bottom: 10px; left: 10px; 
+  display: flex;
+  .card {
+    flex: 1;
+    border: 1px solid #D4D7DC;
+    border-radius: 2px;
+    margin: 10px;
+  }
+}
+#content2 {
+  flex-direction: column;
+}
+
+.contentExamples .card {
+  padding: 12px;
+}
+.buttonCopy {
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 22px;
+  margin-left: 16px;
+  margin-bottom: 8px; 
+}
+
+.accordion {
+  p {
+    font-size: 16px;
+    color: #6B6C72;
+    line-height: 20px;
+    background:none;
+  }
+}
+@keyframes qbal-caret-opening {
+  from { transform: rotate(0deg) }
+  to   { transform: rotate(180deg) }
+}
+@keyframes qbal-caret-closing {
+  from { transform: rotate(180deg) }
+  to   { transform: rotate(360deg) }
+}
+.accordionRow {
+  position: relative;
+  background: #FFFFFF;
+  border: 1px solid #E3E5E8;
+  box-shadow: 0 2px 4px 0 #D4D7DC;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  padding: 20px;
+  p {
+    margin: 0;
+  }
+  ::after {
+    content: '';
+    position: absolute;
+    top: 24px;
+    right: 20px;
+    background: url('./images/icon-down-caret.svg') center no-repeat;
+    width: 15px;
+    height: 12px;
+    animation-duration: $qbal-duration-6;
+    animation-timing-function: $qbal-ease-slow;
+    animation-fill-mode: forwards;
+    will-change: transform;
+  }
+  &.open ::after {
+    transform: rotate(180deg)
+  }
+  &.opening ::after {
+    animation-name: qbal-caret-opening;
+  }
+  &.closing ::after {
+    animation-name: qbal-caret-closing;
+  }
+}
+.accordionContent {
+  overflow: hidden;
+  p {
+    margin-top: 20px;
+  }
+}

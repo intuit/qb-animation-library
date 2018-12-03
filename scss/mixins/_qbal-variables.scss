@@ -1,0 +1,48 @@
+// The MIT License
+// Copyright 2018 Intuit Inc.
+// 
+// Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation 
+// files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, 
+// modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the 
+// Software is furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE 
+// WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR 
+// COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+// ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
+
+$qbal-scale-1: .5;
+$qbal-scale-2: .8;
+$qbal-scale-3: .9;
+$qbal-scale-4: 2.75;
+
+$qbal-distance-1: 30px;
+$qbal-distance-2: 90px;
+$qbal-distance-3: 125px;
+
+$qbal-duration-1: 85ms;
+$qbal-duration-2: 167ms;
+$qbal-duration-3: 250ms;
+$qbal-duration-4: 333ms;
+$qbal-duration-5: 417ms;
+$qbal-duration-6: 500ms;
+$qbal-duration-7: 750ms;
+$qbal-duration-8: 1s;
+$qbal-duration-9: 2s;
+
+$qbal-ease-slow: cubic-bezier(0.35, 0.00, 0.50, 1.00);
+$qbal-ease-quick: cubic-bezier(0.35, 0.00, 0.25, 1.00);
+$qbal-ease-entrance: cubic-bezier(0.00, 0.00, 0.10, 1.00);
+$qbal-ease-exit: cubic-bezier(0.35, 0.00, 0.80, 1.00);
+$qbal-ease-spirited: cubic-bezier(0.35, 1.30, 0.30, 1.00);
+$qbal-ease-spirited-entrance: cubic-bezier(0.15, 1.30, 0.30, 1.00);
+$qbal-ease-spirited-exit: cubic-bezier(0.70, -0.10, 0.60, 0.10);
+
+
+// for CSS transition property
+$qbal-transition-width: width $qbal-duration-6 $qbal-ease-quick;
+$qbal-transition-height: height $qbal-duration-6 $qbal-ease-quick;
+$qbal-transition-opacity: opacity $qbal-duration-3 $qbal-ease-slow;
+$qbal-transition-color: color $qbal-duration-3 $qbal-ease-slow;

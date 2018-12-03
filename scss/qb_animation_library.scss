@@ -1,0 +1,76 @@
+/*
+  The MIT License
+  Copyright 2018 Intuit Inc.
+  
+  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation 
+  files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, 
+  modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the 
+  Software is furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE 
+  WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR 
+  COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+  ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
+*/
+
+@import "qbal-mixins";
+// Build CSS from mixins
+
+
+// animation classes
+.qbal-fade-enter { @include qbal-fade-enter }
+.qbal-slideRight-enter { @include qbal-slideRight-enter }
+.qbal-slideLeft-enter { @include qbal-slideLeft-enter }
+.qbal-slideUp-enter { @include qbal-slideUp-enter }
+.qbal-slideDown-enter { @include qbal-slideDown-enter }
+.qbal-slideDownSubtle-enter { @include qbal-slideDownSubtle-enter }
+.qbal-slideUpExaggerated-enter { @include qbal-slideUpExaggerated-enter }
+.qbal-expandHorizontal164-enter { @include qbal-expandHorizontal164-enter }
+.qbal-drop-enter { @include qbal-drop-enter }
+.qbal-grow-enter { @include qbal-grow-enter }
+.qbal-growExaggerated-enter { @include qbal-growExaggerated-enter }
+.qbal-fade-exit { @include qbal-fade-exit }
+.qbal-slideRight-exit { @include qbal-slideRight-exit }
+.qbal-slideLeft-exit { @include qbal-slideLeft-exit }
+.qbal-slideDown-exit { @include qbal-slideDown-exit }
+.qbal-slideUp-exit { @include qbal-slideUp-exit }
+.qbal-slideUpSubtle-exit { @include qbal-slideUpSubtle-exit }
+.qbal-slideDownExaggerated-exit { @include qbal-slideDownExaggerated-exit }
+.qbal-collapseHorizontal164-exit { @include qbal-collapseHorizontal164-exit }
+.qbal-rise-exit { @include qbal-rise-exit }
+.qbal-shrink-exit { @include qbal-shrink-exit }
+.qbal-shrinkSubtle-exit { @include qbal-shrinkSubtle-exit }
+.qbal-stagger-children { @include qbal-stagger-children }
+.qbal-pulse { @include qbal-pulse }
+
+// transition classes
+.qbal-transition-width { @include qbal-transition-width }
+.qbal-transition-height { @include qbal-transition-height }
+.qbal-transition-opacity { @include qbal-transition-opacity }
+.qbal-transition-color { @include qbal-transition-color }
+
+// semantic classes
+.qbal-overlay-enter { @include qbal-overlay-enter }
+.qbal-overlay-exit { @include qbal-overlay-exit }
+.qbal-trowserModal-enter { @include qbal-trowserModal-enter }
+.qbal-trowserModal-exit { @include qbal-trowserModal-exit }
+.qbal-rightDrawer-enter { @include qbal-rightDrawer-enter }
+.qbal-rightDrawer-exit { @include qbal-rightDrawer-exit }
+.qbal-dialogModal-enter { @include qbal-dialogModal-enter }
+.qbal-dialogModal-exit { @include qbal-dialogModal-exit }
+.qbal-toastNotification-enter { @include qbal-toastNotification-enter }
+.qbal-toastNotification-exit { @include qbal-toastNotification-exit }
+.qbal-tooltip-enter { @include qbal-tooltip-enter }
+.qbal-tooltip-exit { @include qbal-tooltip-exit }
+.qbal-coachMark-enter { @include qbal-coachMark-enter }
+.qbal-coachMark-exit { @include qbal-coachMark-exit }
+.qbal-expandHorizontal164-enter { @include qbal-expandHorizontal164-enter }
+.qbal-collapseHorizontal164-exit { @include qbal-collapseHorizontal164-exit }
+.qbal-flyout-enter { @include qbal-flyout-enter }
+.qbal-flyout-exit { @include qbal-flyout-exit }
+.qbal-dropdown-enter { @include qbal-dropdown-enter }
+.qbal-dropdown-exit { @include qbal-dropdown-exit }
+.qbal-tabContent-enter { @include qbal-tabContent-enter }
+.qbal-tabContent-exit { @include qbal-tabContent-exit }

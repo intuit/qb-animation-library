@@ -1,0 +1,146 @@
+// The MIT License
+// Copyright 2018 Intuit Inc.
+// 
+// Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation 
+// files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, 
+// modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the 
+// Software is furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE 
+// WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR 
+// COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+// ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
+  
+// ENTRANCES
+@mixin qbal-fade-enter {
+    animation: qbal-FadeEnter $qbal-duration-4 $qbal-ease-slow backwards;
+}
+@mixin qbal-slideRight-enter {
+    animation: qbal-FadeEnter $qbal-duration-3 $qbal-ease-slow backwards,
+               qbal-RightEnter $qbal-duration-4 $qbal-ease-entrance backwards;
+}
+@mixin qbal-slideLeft-enter {
+    animation: qbal-FadeEnter $qbal-duration-3 $qbal-ease-slow backwards,
+               qbal-LeftEnter $qbal-duration-4 $qbal-ease-entrance backwards;
+}
+@mixin qbal-slideUp-enter {
+    animation: qbal-FadeEnter $qbal-duration-4 $qbal-ease-slow backwards,
+               qbal-UpEnter $qbal-duration-4 $qbal-ease-entrance backwards;
+}
+@mixin qbal-slideDown-enter {
+    animation: qbal-FadeEnter $qbal-duration-3 $qbal-ease-slow backwards,
+               qbal-DownEnter $qbal-duration-4 $qbal-ease-entrance backwards;
+}
+@mixin qbal-slideDownSubtle-enter {
+    animation: qbal-FadeEnter $qbal-duration-3 $qbal-ease-slow backwards,
+               qbal-DownSubtleEnter $qbal-duration-3 $qbal-ease-entrance backwards;
+}
+@mixin qbal-slideUpExaggerated-enter {
+    animation: qbal-FadeEnter $qbal-duration-3 $qbal-ease-slow backwards,
+               qbal-UpExaggeratedEnter $qbal-duration-3 $qbal-ease-entrance backwards;
+}
+@mixin qbal-expandHorizontal164-enter {
+    animation: qbal-ExpandHorizontalEnter164 $qbal-duration-6 $qbal-ease-quick backwards;
+    > * {
+        animation: qbal-FadeEnter $qbal-duration-4 $qbal-ease-slow #{$qbal-duration-6 - $qbal-duration-4} backwards;
+    }
+}
+@mixin qbal-drop-enter {
+    animation: qbal-FadeEnter $qbal-duration-3 $qbal-ease-slow backwards,
+               qbal-DownEnter $qbal-duration-7 $qbal-ease-spirited-entrance backwards;
+}
+@mixin qbal-grow-enter {
+    animation: qbal-FadeEnter $qbal-duration-3 $qbal-ease-slow backwards,
+               qbal-GrowEnter $qbal-duration-7 $qbal-ease-spirited-entrance backwards;
+}
+@mixin qbal-growExaggerated-enter {
+    animation: qbal-FadeEnter $qbal-duration-3 $qbal-ease-slow backwards,
+               qbal-GrowExaggeratedEnter $qbal-duration-7 $qbal-ease-spirited-entrance backwards;
+}
+
+
+// EXITS
+@mixin qbal-fade-exit {
+    animation: qbal-FadeExit $qbal-duration-3 $qbal-ease-slow forwards;
+}
+@mixin qbal-slideRight-exit {
+    animation: qbal-FadeExit $qbal-duration-3 $qbal-ease-slow forwards,
+               qbal-RightExit $qbal-duration-3 $qbal-ease-exit forwards;
+}
+@mixin qbal-slideLeft-exit {
+    animation: qbal-FadeExit $qbal-duration-3 $qbal-ease-slow forwards,
+               qbal-LeftExit $qbal-duration-3 $qbal-ease-exit forwards;
+}
+@mixin qbal-slideDown-exit {
+    animation: qbal-FadeExit $qbal-duration-3 $qbal-ease-slow forwards,
+               qbal-DownExit $qbal-duration-3 $qbal-ease-exit forwards;
+}
+@mixin qbal-slideUp-exit {
+    animation: qbal-FadeExit $qbal-duration-3 $qbal-ease-slow forwards,
+               qbal-UpExit $qbal-duration-3 $qbal-ease-exit forwards;
+}
+@mixin qbal-slideUpSubtle-exit {
+    animation: qbal-FadeExit $qbal-duration-2 $qbal-ease-slow forwards,
+               qbal-UpSubtleExit $qbal-duration-2 $qbal-ease-exit forwards;
+}
+@mixin qbal-slideDownExaggerated-exit {
+    animation: qbal-FadeExit $qbal-duration-3 $qbal-ease-slow forwards,
+               qbal-DownExaggeratedExit $qbal-duration-3 $qbal-ease-exit forwards;
+}
+@mixin qbal-collapseHorizontal164-exit {
+    animation: qbal-CollapseHorizontalExit164 $qbal-duration-6 $qbal-ease-quick forwards;
+    > * {
+        animation: qbal-FadeExit $qbal-duration-4 $qbal-ease-slow $qbal-duration-2 forwards;
+    }
+}
+@mixin qbal-rise-exit {
+    animation: qbal-FadeExit $qbal-duration-3 $qbal-ease-slow #{$qbal-duration-7 - $qbal-duration-3} forwards,
+               qbal-UpExit $qbal-duration-7 $qbal-ease-spirited-exit forwards;
+}
+@mixin qbal-shrink-exit {
+    animation: qbal-FadeExit $qbal-duration-3 $qbal-ease-slow forwards,
+               qbal-ShrinkExit $qbal-duration-3 $qbal-ease-exit forwards;
+}
+@mixin qbal-shrinkSubtle-exit {
+    animation: qbal-FadeExit $qbal-duration-3 $qbal-ease-slow forwards,
+               qbal-ShrinkSubtleExit $qbal-duration-3 $qbal-ease-exit forwards;
+}
+
+
+// MISC
+@mixin qbal-pulse {
+    animation: qbal-PulseGrow $qbal-duration-9 $qbal-ease-slow,
+               qbal-PulseFade $qbal-duration-9 $qbal-ease-slow;
+    transform-origin: 50% 50% ;
+}
+
+
+// STAGGER CHILDREN
+@mixin qbal-stagger-children {
+    @for $i from 1 through 20  {
+        :nth-child( #{$i} ) {
+            animation-delay: #{$i * $qbal-duration-3}; 
+        }
+    }
+}
+
+
+// TRANSITIONS
+@mixin qbal-transition-width {
+    transition: $qbal-transition-width;
+    will-change: width;
+} 
+@mixin qbal-transition-height {
+    transition: $qbal-transition-height;
+    will-change: height;
+} 
+@mixin qbal-transition-opacity {
+    transition: $qbal-transition-opacity;
+    will-change: opacity;
+} 
+@mixin qbal-transition-color {
+    transition: $qbal-transition-color;
+    will-change: color  ;
+}

@@ -1,0 +1,463 @@
+<!-- 
+  The MIT License
+  Copyright 2018 Intuit Inc.
+  
+  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation 
+  files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, 
+  modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the 
+  Software is furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE 
+  WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR 
+  COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+  ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=840">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>qbal - QuickBooks Animation Library</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110740168-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-110740168-2');
+    </script>
+</head>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    var applyClass = (button) => {
+        const demoPanel = document.querySelector("#demo-panel-a, #demo-panel-b, #demo-panel-c");
+        let newDemoPanel;
+        if (button.innerHTML.indexOf("pulse") >= 0) {
+            newDemoPanel = document.getElementById("demo-panel-template-c").cloneNode(true);
+            $('.demo-container').addClass('hidden');
+        } else {
+            if (button.innerHTML.indexOf("Horizontal") >= 0) {
+                newDemoPanel = document.getElementById("demo-panel-template-b").cloneNode(true);
+            } else {
+                newDemoPanel = document.getElementById("demo-panel-template-a").cloneNode();
+            }
+            newDemoPanel.className = button.innerHTML;
+            $('.demo-container').removeClass('hidden');
+        }
+        newDemoPanel.id = "demo-panel-" + newDemoPanel.id[newDemoPanel.id.length - 1];
+        demoPanel.replaceWith(newDemoPanel);
+    }
+
+</script>
+
+<body>
+
+    <div class="container">
+        <img class="logoImage" src="./images/logo-qbal@2x.png" width=450 alt="quiickbooks animation logo">
+        <h1>QuickBooks Animation Library</h1>
+        <p><strong>CSS</strong> and <strong>SCSS</strong> for adding animation to your project. </p>
+        <p style="font-size:16px; line-height:24px;">This library shares an approach to implementing and systematizing
+            motion on the web. If you are an Intuit employee, refer to our <a href="https://designsystem.quickbooks.com/bolt/forward-momentum/">design
+                system</a> for more detail on motivation and rationale.</p>
+    </div>
+
+    <section id="toc">
+        <h2 style="margin-bottom: 12px;">CONTENTS</h2>
+        <ol>
+            <li><a href="#animation-classes">Animation classes</a></li>
+            <li><a href="#transition-classes">Transition classes</a></li>
+            <li><a href="#examples">Examples + semantic classes</a>
+                <ul>
+                    <li><a href="#modals">Modals</a></li>
+                    <li><a href="#notifications">Notifications & tooltips</a></li>
+                    <li><a href="#reveal">Reveal options</a></li>
+                    <li><a href="#transitions">Content transitions</a></li>
+                </ul>
+            </li>
+            <li><a href="#installation">Installation + Usage</a>
+                <ul>
+                    <li><a href="#CSS">As CSS</a></li>
+                    <li><a href="#SCSS">As SCSS</a></li>
+                </ul>
+            <li><a href="#github">GitHub repo</a></li>
+        </ol>
+    </section>
+
+    <section id="animation-classes">
+        <h2>ANIMATION CLASSES</h2>
+        <p>These animations will play as soon as the class is added.</p>
+        <div class="class-explorer">
+            <div class="class-explorer-buttons">
+                <div class="class-buttons-row">
+                    <div class="class-buttons-col">
+                        <h3>Entrances</h3>
+                        <button onClick="applyClass(this)">qbal-fade-enter</button>
+                    </div>
+                    <div class="class-buttons-col">
+                        <h3>Exits</h3>
+                        <button onClick="applyClass(this)">qbal-fade-exit</button>
+                    </div>
+                </div>
+                <div class="class-buttons-row">
+                    <div class="class-buttons-col">
+                        <button onClick="applyClass(this)">qbal-slideRight-enter</button>
+                        <button onClick="applyClass(this)">qbal-slideLeft-enter</button>
+                        <button onClick="applyClass(this)">qbal-slideUp-enter</button>
+                        <button onClick="applyClass(this)">qbal-slideDown-enter</button>
+                    </div>
+                    <div class="class-buttons-col">
+                        <button onClick="applyClass(this)">qbal-slideLeft-exit</button>
+                        <button onClick="applyClass(this)">qbal-slideRight-exit</button>
+                        <button onClick="applyClass(this)">qbal-slideDown-exit</button>
+                        <button onClick="applyClass(this)">qbal-slideUp-exit</button>
+                    </div>
+                </div>
+                <div class="class-buttons-row">
+                    <div class="class-buttons-col">
+                        <button onClick="applyClass(this)">qbal-slideDownSubtle-enter</button>
+                        <button onClick="applyClass(this)">qbal-slideUpExaggerated-enter</button>
+                    </div>
+                    <div class="class-buttons-col">
+                        <button onClick="applyClass(this)">qbal-slideUpSubtle-exit</button>
+                        <button onClick="applyClass(this)">qbal-slideDownExaggerated-exit</button>
+                    </div>
+                </div>
+                <div class="class-buttons-row">
+                    <div class="class-buttons-col">
+                        <button onClick="applyClass(this)">qbal-drop-enter</button>
+                        <button onClick="applyClass(this)">qbal-grow-enter</button>
+                        <button onClick="applyClass(this)">qbal-growExaggerated-enter</button>
+                    </div>
+                    <div class="class-buttons-col">
+                        <button onClick="applyClass(this)">qbal-rise-exit</button>
+                        <button onClick="applyClass(this)">qbal-shrink-exit</button>
+                        <button onClick="applyClass(this)">qbal-shrinkSubtle-exit</button>
+                    </div>
+                </div>
+                <div class="class-buttons-row">
+                    <div class="class-buttons-col">
+                        <button onClick="applyClass(this)">qbal-expandHorizontal164-enter</button>
+                    </div>
+                    <div class="class-buttons-col">
+                        <button onClick="applyClass(this)">qbal-collapseHorizontal164-exit</button>
+                    </div>
+                </div>
+                <div class="class-buttons-row">
+                    <div class="class-buttons-col">
+                        <button onClick="applyClass(this)">qbal-pulse</button>
+                    </div>
+                </div>
+            </div>
+            <div class="class-explorer-visualizer">
+                <div class="demo-container">
+                    <img id="demo-panel-a" src="./images/demo-shape@2x.png" width=200 height=200 alt="">
+                    <img id="demo-panel-template-a" src="./images/demo-shape@2x.png" width=200 height=200 alt="">
+                    <div id="demo-panel-template-b">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div id="demo-panel-template-c">
+                        <div class="qbal-pulse"></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="transition-classes">
+        <h2>TRANSITION CLASSES</h2>
+        <div id="accordion" class="example" style="float: right; width: 360px; height: 640px; margin-left: 40px; padding: 12px; overflow: hidden;"></div>
+        <p>These classes apply easing and timing when the specified property changes.</p>
+        <p style="font-size: 16px">
+            <code>qbal-transition-width</code><br>
+            <code>qbal-transition-height</code><br>
+            <code>qbal-transition-opacity</code><br>
+            <code>qbal-transition-color</code>
+        </p>
+        <p>In the example to the right, each card's content container has the <code>qbal-transition-height</code> class
+            applied.</p>
+        <p class="small"><a href="./accordion.js">React code for the accordion example</a></p>
+
+    </section>
+    <div style="clear:both"></div>
+
+    <div class="gray-bg">
+        <section id="examples">
+            <h2 style="margin-bottom: 12px;">EXAMPLES + SEMANTIC CLASSES</h2>
+            <p style="margin-bottom: 40px;">View semantic mappings in: <a href="https://github.com/intuit/qb-animation-library/blob/master/scss/_semantic-classes.scss">/scss/_semantic-classes.scss</a></p>
+
+            <div>
+                <h3 id="modals">Modals</h3>
+                <p>Right drawer and dialog modal also add a 60% opacity black overlay with animation classes <code>qbal-overlay-enter</code>
+                    and <code>qbal-overlay-exit</code> on enter and exit&nbsp;respectively.</p>
+                <div class="example">
+                    <div class="modalOverlay qbal-overlay-exit"></div>
+                    <div class="live-example"></div>
+                    <div class="templates">
+                        <div class="dialogModal">
+                            <img class="x" src="./images/x.svg" alt="">
+                            <h1 style="width: 60%"></h1>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p style="width: 80%"></p>
+                            <button></button>
+                        </div>
+                        <div class="trowserModal">
+                            <img class="x" src="./images/x.svg" alt="">
+                            <h1 style="width: 60%"></h1>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p style="width: 80%"></p>
+                            <footer><button></button></footer>
+                        </div>
+                        <div class="rightDrawer">
+                            <img class="x" src="./images/x.svg" alt="">
+                            <h1 style="width: 60%"></h1>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p style="width: 80%"></p>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="handleExampleButton(this)">qbal-trowserModal-enter</button>
+                <button onclick="handleExampleButton(this)">qbal-trowserModal-exit</button>
+                <br>
+                <button onclick="handleExampleButton(this)">qbal-rightDrawer-enter</button>
+                <button onclick="handleExampleButton(this)">qbal-rightDrawer-exit</button>
+                <br>
+                <button onclick="handleExampleButton(this)">qbal-dialogModal-enter</button>
+                <button onclick="handleExampleButton(this)">qbal-dialogModal-exit</button>
+            </div>
+
+            <div>
+                <h3 id="notifications">Notifications & tooltips</h3>
+                <p>The tooltip and coach mark should have transform origin set to the corner closest to the "pointer".
+                    Below, the tooltip has: <code>transform-origin: bottom left;</code></p>
+                <div class="example" style="padding:40px;">
+                    <div class="live-example"></div>
+                    <div style="position: relative; width: 240px; padding-bottom: 64px;">
+                        <h1></h1>
+                        <p></p>
+                        <p style="margin-bottom: 40px;"></p>
+                        <p style="width: 50%"></p>
+                        <input type="text" style="width: 100%; line-height: 20px; border-radius: 2px; border: 1px solid #BABEC5;">
+                        <button style="right: 0;"></button>
+                    </div>
+                    <div class="templates">
+                        <img src="./images/notification.svg" alt="" class="toastNotification">
+                        <img src="./images/tooltip.svg" alt="" class="tooltip">
+                        <img src="./images/coach-mark.svg" alt="" class="coachMark">
+                    </div>
+                </div>
+                <button onclick="handleExampleButton(this)">qbal-tooltip-enter</button>
+                <button onclick="handleExampleButton(this)">qbal-tooltip-exit</button>
+                <br>
+                <button onclick="handleExampleButton(this)">qbal-coachMark-enter</button>
+                <button onclick="handleExampleButton(this)">qbal-coachMark-exit</button>
+                <br>
+                <button onclick="handleExampleButton(this)">qbal-toastNotification-enter</button>
+                <button onclick="handleExampleButton(this)">qbal-toastNotification-exit</button>
+            </div>
+
+            <div>
+                <h3 id="reveal">Reveal options</h3>
+                <div class="example">
+                    <div style="z-index: 2;" class="modalOverlay qbal-overlay-exit"></div>
+                    <div class="live-example">
+                    </div>
+                    <div class="header">
+                        <img style="position: absolute; right: 0;" src="./images/nav-buttons.svg" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="sidebar164 qbal-collapseHorizontal164-exit">
+                            <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card">
+                            <img class="dropdown-button" src="./images/dropdown-button.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="templates">
+                        <img src="./images/dropdown.svg" class="dropdown" alt="">
+                        <img src="./images/flyout.svg" class="flyout" alt="">
+                    </div>
+                </div>
+                <button onclick="handleSidebarExample(this)">qbal-expandHorizontal164-enter</button>
+                <button onclick="handleSidebarExample(this)">qbal-collapseHorizontal164-exit</button>
+                <br>
+                <button onclick="handleExampleButton(this)">qbal-flyout-enter</button>
+                <button onclick="handleExampleButton(this)">qbal-flyout-exit</button>
+                <br>
+                <button onclick="handleExampleButton(this)">qbal-dropdown-enter</button>
+                <button onclick="handleExampleButton(this)">qbal-dropdown-exit</button>
+            </div>
+
+            <div>
+                <h3 id="transitions">Content transitions</h3>
+                <div class="example contentExamples">
+                    <div id="content1" class="entering">
+                        <div class="card">
+                            <h1 style="width: 60%"></h1>
+                            <p></p> <br>
+                            <p></p>
+                            <p style="width: 80%"></p>
+                        </div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                    <div id="content2" class="qbal-tabContent-exit">
+                        <div class="card">
+                            <h1 style="width: 60%; margin-bottom: 20px;"></h1>
+                            <p style="width: 80%"></p>
+                        </div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                </div>
+
+                <button onclick="handleContentTransition('tabContent')">
+                    qbal-tabContent-exit&nbsp; <strong>+</strong>&nbsp; qbal-tabContent-enter
+                </button>
+                <p class="buttonCopy"><code>qbal-tabContent-enter</code>includes a delay so that the content enters
+                    <strong>after</strong> the previous tab has exited.</p>
+                <button onclick="handleContentTransition('staggerEnter')">
+                    qbal-slideUp-enter&nbsp; <strong>+</strong>&nbsp; qbal-stagger-children <strong>on parent</strong>
+                </button>
+                <button onclick="handleContentTransition('fadeOut')">
+                    qbal-fade-exit
+                </button>
+                <p class="buttonCopy">Typically items will only stagger when entering and then exit together because we
+                    want to focus more attention on what's arriving than what's leaving.</p>
+
+            </div>
+        </section>
+    </div>
+
+    <section>
+        <h2 id="installation">INSTALLATION + USAGE</h2>
+
+        <h3 id="CSS">Usage as CSS</h3>
+        <ol>
+            <li>
+                <p>Download <a href="./css/qb_animation_library.css">qb_animation_library.css</a>
+            </li>
+            <li>Link to it in your HTML
+                <p class="small">
+                    <code>&lt;link rel="stylesheet" href="path/to/qb_animation_library.css"&gt;</code>
+                </p>
+            </li>
+            <li>
+                Start adding classes:
+                <p class="small">
+                    <code>&lt;div class="qbal-fade-enter"&gt; ... &lt;/div&gt;</code>
+                </p>
+            </li>
+        </ol>
+
+        <h3 id="SCSS" style="margin-top: 80px">Usage as SCSS</h3>
+        <ol>
+            <li>
+                <p>Clone <a href="https://github.com/intuit/qb-animation-library/">repo</a> or <a href="https://github.com/intuit/qb-animation-library/archive/master.zip">download
+                        as ZIP</a></p>
+            </li>
+            <li>
+                <p>Copy <code>/scss</code> folder to your project</p>
+            </li>
+            <li>Import qbal mixins into your scss:
+                <p class="small"><code>@import "qbal-mixins";</code></p>
+            </li>
+            <li>
+                Start including mixins in your scss (mixin names are the same as the class names above):
+                <p class="small">
+                    <code>.my-tooltip {
+    @include qbal-tooltip-enter;
+}
+                        </code>
+                </p>
+            </li>
+        </ol>
+
+    </section>
+
+    <div class="gray-bg">
+        <section id="github">
+            <h2 style="margin-bottom: 12px;">GIHUB REPO</h2>
+            <a href="https://github.com/intuit/qb-animation-library/">https://github.com/intuit/qb-animation-library/</a>
+        </section>
+        <div style="height: 20px;"></div>
+    </div>
+
+
+    <script>
+        var handleExampleButton = (button) => {
+            const buttonText = button.innerHTML;
+            $(".live-example").empty();
+            const exampleContainer = $(button).siblings('.example').children('.live-example');
+            const demoClass = buttonText.split('-')[1];
+            $('.templates').children(`.${demoClass}`).clone().addClass(buttonText).appendTo(exampleContainer);
+            if (buttonText === "qbal-rightDrawer-enter" ||
+                buttonText === "qbal-dialogModal-enter" ||
+                buttonText === "qbal-flyout-enter") {
+                $(".modalOverlay").attr("class", "modalOverlay qbal-overlay-enter");
+            } else {
+                $(".modalOverlay").attr("class", "modalOverlay qbal-overlay-exit");
+            }
+        }
+        var handleSidebarExample = (button) => {
+            $(".sidebar164").attr("class", `sidebar164 ${button.innerHTML}`);
+        }
+        var handleContentTransition = (transition) => {
+            const $current = $('.contentExamples .entering');
+            if (transition === 'tabContent') {
+                $('.contentExamples .card').attr("class", 'card');
+                $current.attr("class", `qbal-${transition}-exit`);
+                $current.siblings().attr("class", `qbal-${transition}-enter entering`);
+            } else
+                if (transition === 'staggerEnter') {
+                    $current.addClass('qbal-stagger-children');
+                    let $children = $current.children()
+                    $current.empty();
+                    $children.attr('class', 'card qbal-slideUp-enter').appendTo($current);
+                } else
+                    if (transition === 'fadeOut') {
+                        $current.removeClass('qbal-stagger-children');
+                        let $children = $current.children()
+                        $current.empty();
+                        $children.attr('class', 'card qbal-fade-exit').appendTo($current);
+                    }
+        }
+    </script>
+
+    <!-- When deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
+    <script type="text/babel" src="accordion.js"></script>
+
+</body>
+
+</html>

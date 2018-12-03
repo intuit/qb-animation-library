@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="162px" height="44px" viewBox="0 0 162 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>nav-buttons</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="nav-buttons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-Copy-85" fill="#8D9096" x="128" y="10" width="24" height="24" rx="12"></rect>
+        <rect id="Rectangle-Copy-86" fill="#8D9096" x="88" y="10" width="24" height="24" rx="12"></rect>
+        <rect id="Rectangle-Copy-87" fill="#8D9096" x="48" y="10" width="24" height="24" rx="12"></rect>
+        <rect id="Rectangle-Copy-88" fill="#8D9096" x="8" y="10" width="24" height="24" rx="12"></rect>
+    </g>
+</svg>
