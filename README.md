@@ -21,7 +21,7 @@ This is one approach to implementing and systematizing motion on the web. If you
   - Transitions classes for height, width, opacity, and color
   - Plus more! [See all examples 👀](https://intuit.github.io/qb-animation-library/)
 
-## How it works
+## Library structure
 
 `_qbal-variables.scss` defines timing, easing, and property values to animate
 
