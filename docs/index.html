@@ -80,12 +80,11 @@
                     <li><a href="#transitions">Content transitions</a></li>
                 </ul>
             </li>
-            <li><a href="#installation">Installation + Usage</a>
-                <ul>
-                    <li><a href="#CSS">As CSS</a></li>
-                    <li><a href="#SCSS">As SCSS</a></li>
-                </ul>
-            <li><a href="#github">GitHub repo</a></li>
+            <li><a href="https://github.com/intuit/qb-animation-library/">GitHub repo</a></li>
+            <ul>
+                <li><a href="https://github.com/intuit/qb-animation-library/#how-it-works">How it works</a></li>
+                <li><a href="https://github.com/intuit/qb-animation-library/#usage">Installation + Usage</a></li>
+            </ul>
         </ol>
     </section>
 
@@ -357,59 +356,16 @@
         </section>
     </div>
 
-    <section>
-        <h2 id="installation">INSTALLATION + USAGE</h2>
-
-        <h3 id="CSS">Usage as CSS</h3>
-        <ol>
-            <li>
-                <p>Download <a href="./css/qb_animation_library.css">qb_animation_library.css</a>
-            </li>
-            <li>Link to it in your HTML
-                <p class="small">
-                    <code>&lt;link rel="stylesheet" href="path/to/qb_animation_library.css"&gt;</code>
-                </p>
-            </li>
-            <li>
-                Start adding classes:
-                <p class="small">
-                    <code>&lt;div class="qbal-fade-enter"&gt; ... &lt;/div&gt;</code>
-                </p>
-            </li>
-        </ol>
-
-        <h3 id="SCSS" style="margin-top: 80px">Usage as SCSS</h3>
-        <ol>
-            <li>
-                <p>Clone <a href="https://github.com/intuit/qb-animation-library/">repo</a> or <a href="https://github.com/intuit/qb-animation-library/archive/master.zip">download
-                        as ZIP</a></p>
-            </li>
-            <li>
-                <p>Copy <code>/scss</code> folder to your project</p>
-            </li>
-            <li>Import qbal mixins into your scss:
-                <p class="small"><code>@import "qbal-mixins";</code></p>
-            </li>
-            <li>
-                Start including mixins in your scss (mixin names are the same as the class names above):
-                <p class="small">
-                    <code>.my-tooltip {
-    @include qbal-tooltip-enter;
-}
-                        </code>
-                </p>
-            </li>
-        </ol>
+    <section id="github">
+        <h2 style="margin-bottom: 12px;">GIHUB REPO</h2>
+        <a href="https://github.com/intuit/qb-animation-library/">https://github.com/intuit/qb-animation-library/</a>
+        <ul>
+            <li><a href="https://github.com/intuit/qb-animation-library/#how-it-works">How it works</a></li>
+            <li><a href="https://github.com/intuit/qb-animation-library/#usage">Installation + Usage</a></li>
+        </ul>
 
     </section>
-
-    <div class="gray-bg">
-        <section id="github">
-            <h2 style="margin-bottom: 12px;">GIHUB REPO</h2>
-            <a href="https://github.com/intuit/qb-animation-library/">https://github.com/intuit/qb-animation-library/</a>
-        </section>
-        <div style="height: 20px;"></div>
-    </div>
+    <div style="height: 80px;"></div>
 
 
     <script>
