@@ -2,8 +2,8 @@
 
 [![CircleCI](https://circleci.com/gh/intuit/qb-animation-library.svg?style=svg)](https://circleci.com/gh/intuit/qb-animation-library)
 [![Auto Release](https://img.shields.io/badge/release-auto.svg?colorA=888888&colorB=9B065A&label=auto)](https://github.com/intuit/auto-release)
-[![npm](https://img.shields.io/npm/v/qb-animation-library.svg?style=for-the-badge)](https://www.npmjs.com/package/qb-animation-library)
-[![npm](https://img.shields.io/npm/dt/qb-animation-library.svg?style=for-the-badge)](https://www.npmjs.com/package/qb-animation-library)
+[![npm](https://img.shields.io/npm/v/qb-animation-library.svg)](https://www.npmjs.com/package/qb-animation-library)
+[![npm](https://img.shields.io/npm/dt/qb-animation-library.svg)](https://www.npmjs.com/package/qb-animation-library)
 
 The QuickBooks Animation Library is a solution to add QuickBooks motion to your product, page, or feature. Our motion is natural, guiding, and calm.
 
