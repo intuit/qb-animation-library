@@ -1,3 +1,12 @@
+# v0.0.3 (Sat Jan 19 2019)
+
+#### 🏠  Internal
+
+- use package lock and switch to `npm ci` for ci build [#6](https://github.com/intuit/qb-animation-library/pull/6) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+- update auto... again [#5](https://github.com/intuit/qb-animation-library/pull/5) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+---
+
 # v0.0.2 (Fri Jan 18 2019)
 
 #### 🐛  Bug Fix
