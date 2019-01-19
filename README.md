@@ -1,5 +1,7 @@
 # qbal - QuickBooks Animation Library
 
+[![CircleCI](https://circleci.com/gh/intuit/qb-animation-library.svg?style=svg)](https://circleci.com/gh/intuit/qb-animation-library)
+
 The QuickBooks Animation Library is a solution to add QuickBooks motion to your product, page, or feature. Our motion is natural, guiding, and calm.
 
 This is one approach to implementing and systematizing motion on the web. If you are an Intuit employee, refer to our <a href="https://designsystem.quickbooks.com/bolt/forward-momentum/">design system</a> for more detail on motion principles, motivation, and rationale.</p>
@@ -55,9 +57,10 @@ The 4 above files can be included via `_qbal-mixins.scss` and then used as mixin
    `@import "qbal-mixins";`
 
 1. Start including mixins in your scss (mixin names are the same as the class names above):
-   ```
+
+   ```scss
    .my-tooltip {
-       @include qbal-tooltip-enter;
+     @include qbal-tooltip-enter;
    }
    ```
 
@@ -72,21 +75,29 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Development setup
 
 - Clone repository and install
+
   ```bash
   git clone git@github.com:intuit/qb-animation-library.git
   cd qb-animation-library/
   npm install
   ```
+
 - **To build CSS**
+
   ```bash
   npm run build
   ```
+
 - **To build CSS when SCSS files change**
+
   ```bash
   npm run watch
   ```
+
 - **To build CSS when SCSS files change & launch dev http server**
+
   ```bash
   npm run dev
   ```
+
   Then open http://localhost:8080/ in your browser
