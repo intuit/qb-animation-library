@@ -30,7 +30,7 @@
   },
   "author": "Brett Holcomb <brett_holcomb@intuit.com>",
   "devDependencies": {
-    "auto-release-cli": "^2.5.6",
+    "auto-release-cli": "^2.5.7",
     "autoprefixer": "^7.2.4",
     "cssnano": "^3.10.0",
     "http-server": "~0.11.1",
