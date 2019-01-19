@@ -1,3 +1,21 @@
+# v0.0.2 (Fri Jan 18 2019)
+
+#### 🐛  Bug Fix
+
+- add circle config [#1](https://github.com/intuit/qb-animation-library/pull/1) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### 🏠  Internal
+
+- add publish config [#4](https://github.com/intuit/qb-animation-library/pull/4) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+- update auto [#3](https://github.com/intuit/qb-animation-library/pull/3) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+- Add automated releases [#2](https://github.com/intuit/qb-animation-library/pull/2) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### Authors: 1
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+---
+
 # Changelog
 
 Notable changes to this project will be documented in this file.
