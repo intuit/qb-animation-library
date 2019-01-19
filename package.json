@@ -21,7 +21,8 @@
     "build": "npm run sass && npm run autoprefix && npm run minify && npm run sass-docs && npm run autoprefix-docs",
     "watch": "npm-watch",
     "server": "http-server",
-    "dev": "npm run watch | npm run server ./docs"
+    "dev": "npm run watch | npm run server ./docs",
+    "release": "auto shipit"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
   },
   "author": "Brett Holcomb <brett_holcomb@intuit.com>",
   "devDependencies": {
+    "auto-release-cli": "^2.5.6",
     "autoprefixer": "^7.2.4",
     "cssnano": "^3.10.0",
     "http-server": "~0.11.1",
