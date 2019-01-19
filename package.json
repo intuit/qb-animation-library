@@ -29,6 +29,9 @@
     "url": "https://github.com/intuit/qb-animation-library.git"
   },
   "author": "Brett Holcomb <brett_holcomb@intuit.com>",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
   "devDependencies": {
     "auto-release-cli": "^2.5.7",
     "autoprefixer": "^7.2.4",

@@ -1,6 +1,7 @@
 # qbal - QuickBooks Animation Library
 
 [![CircleCI](https://circleci.com/gh/intuit/qb-animation-library.svg?style=svg)](https://circleci.com/gh/intuit/qb-animation-library)
+[![Auto Release](https://img.shields.io/badge/release-auto.svg?colorA=888888&colorB=9B065A&label=auto)](https://github.com/intuit/auto-release)
 
 The QuickBooks Animation Library is a solution to add QuickBooks motion to your product, page, or feature. Our motion is natural, guiding, and calm.
 
