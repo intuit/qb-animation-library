@@ -20,7 +20,7 @@ jobs:
             - qb-animation-library-
       - run:
           name: Install Dependencies
-          command: npm i
+          command: npm ci
       - save_cache:
           key: qb-animation-library-{{ .Branch }}-{{ checksum "package-lock.json" }}-{{ checksum ".circleci/config.yml" }}
           paths:
