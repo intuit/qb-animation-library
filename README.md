@@ -139,3 +139,9 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
   ```
 
   Then open http://localhost:8080/ in your browser
+
+- **To generate styled-components from [tools/generate-styled-components.js](tools/generate-styled-components.js)**
+
+  ```bash
+  npm run generate-styled-components
+  ```
