@@ -1,0 +1,5 @@
+{
+  "presets": [
+    "./tools/babel-preset-es2015"
+  ]
+}
