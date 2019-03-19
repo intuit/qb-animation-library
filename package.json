@@ -1,7 +1,7 @@
 {
   "name": "qb-animation-library",
   "license": "mit",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "The QuickBooks Animation Library is scalable, easy to use solution to add signature QuickBooks motion to your product, page, or feature.",
   "sideEffects": false,
   "main": "styled-components/",
