@@ -67,6 +67,41 @@ The 4 above files can be included via `_qbal-mixins.scss` and then used as mixin
    }
    ```
 
+### Usage as [Styled Components](https://www.styled-components.com/)
+
+1. `npm install --save styled-components` *(if you haven't already)*
+
+1. `npm install --save qb-animation-library`
+
+1. Then in your React component...
+
+    ##### To use any existing named animation:
+    ```JSX  
+      import styled, { keyframes, css } from "styled-components";
+      import { fade_enter } from "qb-animation-library";
+
+      const Container = styled.div`
+        ${fade_enter(css, keyframes)}
+      `;
+    ```
+  
+    ##### To use any animation variables like keyframes and easing curves:
+    ```JSX  
+      import styled, { keyframes, css } from "styled-components";
+      import { animationVariables as animVars } from "qb-animation-library";
+      
+      const upEnterKf = keyframes`${animVars.keyframes_UpEnter}`;
+      const fadeInKf = keyframes`${animVars.keyframes_FadeEnter}`;
+      const styles = css`
+        animation: ${upEnterKf} 2s ${animVars.ease_spirited_entrance},
+                   ${fadeInKf}  1s ${animVars.ease_slow};
+      `;
+      const Container = styled.div`
+        ${styles}
+      `;
+    ```
+    See available animation variables in [styled-components/animation-variables.js](styled-components/animation-variables.js)
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
@@ -104,3 +139,9 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
   ```
 
   Then open http://localhost:8080/ in your browser
+
+- **To generate styled-components from [tools/generate-styled-components.js](tools/generate-styled-components.js)**
+
+  ```bash
+  npm run generate-styled-components
+  ```

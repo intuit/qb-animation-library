@@ -3,6 +3,8 @@
   "license": "mit",
   "version": "0.0.3",
   "description": "The QuickBooks Animation Library is scalable, easy to use solution to add signature QuickBooks motion to your product, page, or feature.",
+  "sideEffects": false,
+  "main": "styled-components/",
   "watch": {
     "build": {
       "patterns": [
@@ -22,7 +24,8 @@
     "watch": "npm-watch",
     "server": "http-server",
     "dev": "npm run watch | npm run server ./docs",
-    "release": "auto shipit"
+    "release": "auto shipit",
+    "generate-styled-components": "babel-node ./tools/generate-styled-components"
   },
   "repository": {
     "type": "git",
@@ -33,9 +36,15 @@
     "registry": "https://registry.npmjs.org"
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.4",
     "auto-release-cli": "^2.5.8",
     "autoprefixer": "^7.2.4",
+    "cross-env": "^5.2.0",
     "cssnano": "^3.10.0",
+    "del": "^4.0.0",
     "http-server": "~0.11.1",
     "node-sass": "^4.7.2",
     "node-sass-tilde-importer": "^1.0.2",
