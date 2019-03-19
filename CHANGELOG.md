@@ -1,3 +1,16 @@
+# v0.1.0 (Tue Mar 19 2019)
+
+#### 🚀  Enhancement
+
+- Styled components [#9](https://github.com/intuit/qb-animation-library/pull/9) (a.m.fernandes@gmail.com)
+
+#### 🏠  Internal
+
+- change badge style to default [#8](https://github.com/intuit/qb-animation-library/pull/8) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+- add npm badges [#7](https://github.com/intuit/qb-animation-library/pull/7) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+---
+
 # v0.0.3 (Sat Jan 19 2019)
 
 #### 🏠  Internal
