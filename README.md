@@ -1,4 +1,4 @@
-# qbal - QuickBooks Animation Library
+# qbal - QuickBooks Animation Amazing Documentation Library
 
 [![CircleCI](https://circleci.com/gh/intuit/qb-animation-library.svg?style=svg)](https://circleci.com/gh/intuit/qb-animation-library)
 [![Auto Release](https://img.shields.io/badge/release-auto.svg?colorA=888888&colorB=9B065A&label=auto)](https://github.com/intuit/auto-release)
