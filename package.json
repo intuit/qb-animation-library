@@ -46,7 +46,7 @@
     "cssnano": "^3.10.0",
     "del": "^4.0.0",
     "http-server": "~0.11.1",
-    "node-sass": "^4.7.2",
+    "node-sass": "^7.0.0",
     "node-sass-tilde-importer": "^1.0.2",
     "npm-watch": "^0.3.0",
     "postcss": "^6.0.16",
